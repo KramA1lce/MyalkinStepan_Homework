@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DynamicArray<A> {
     private A[] arrghay;
     private int initsize = 8;
@@ -19,11 +21,25 @@ public class DynamicArray<A> {
         }
     }
 
+    public void changecap(int newcap) {
+        if (newcap < 0) {
+            throw new RuntimeException();
+        }
+        this.arrghay = Arrays.copyOf(arrghay, newcap);
+        this.initsize = newcap;
+    }
+
     public A get(int number) {
         if (initcap() <= number || number < 0) {
             throw new RuntimeException();
         }
         return arrghay[number];
     }
-    
+
+    public void set(int number, A value) {
+        if (initcap() <= number || number < 0) {
+            throw new RuntimeException();
+        }
+        arrghay[number] = value;
+    }
 }
