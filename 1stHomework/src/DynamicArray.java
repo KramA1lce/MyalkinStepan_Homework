@@ -42,4 +42,9 @@ public class DynamicArray<A> {
         }
         arrghay[number] = value;
     }
+
+    public void add(A value) {
+        resize(arrghay.length + 1);
+        set(arrghay.length - 1, value);
+    }
 }
