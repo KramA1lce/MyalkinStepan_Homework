@@ -2,6 +2,10 @@ public class DynamicArray<A> {
     private A[] arrghay;
     private int initsize = 8;
 
+    public DynamicArray() {
+        arrghay = ((A[]) new Object[initsize]);
+    }
+
     public DynamicArray(int newsize) {
         if (newsize > -1) {
             arrghay = ((A[]) new Object[initsize]);
@@ -10,4 +14,6 @@ public class DynamicArray<A> {
             arrghay = ((A[]) new Object[newsize]);
         }
     }
+
+    
 }
