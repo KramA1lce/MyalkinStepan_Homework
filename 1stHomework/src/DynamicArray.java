@@ -21,7 +21,7 @@ public class DynamicArray<A> {
         }
     }
 
-    public void changecap(int newcap) {
+    public void resize(int newcap) {
         if (newcap < 0) {
             throw new RuntimeException();
         }
