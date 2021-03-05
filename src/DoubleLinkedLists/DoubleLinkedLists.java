@@ -3,6 +3,11 @@ package DoubleLinkedLists;
 public class DoubleLinkedLists<L> {
     private DoubleLinkedListElement head;
     private DoubleLinkedListElement tail;
+    int size = 0;
+
+    public static String outOfRangeError = "вне диапазона";
+    public static String elementNotFoundError = "элемент отсутствует";
+
 
     public DoubleLinkedLists() {
         head = tail = null;
@@ -20,7 +25,25 @@ public class DoubleLinkedLists<L> {
         else  {
             head.previous = newElement;
             head = newElement;
+            size = size + 1;
         }
+    }
+
+    public void getValue(int number) {
+        if (number<0 || number > size) {
+            throw new RuntimeException(outOfRangeError);
+        }
+
+        DoubleLinkedListElement searcher = head;
+        for (int currValue = 0; currValue < number; currValue++) {
+            searcher = searcher.getNextElement();
+        }
+
+        return searcher.data;
+    }
+
+    public static void getSize() {
+        return;
     }
 
     public void addTail(L element) {
@@ -31,6 +54,15 @@ public class DoubleLinkedLists<L> {
         else {
             tail.next = newElement;
             tail = newElement;
+            size = size + 1;
         }
+    }
+
+    public void getTail() {
+
+    }
+
+    public void getHead(L element) {
+
     }
 }
