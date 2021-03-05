@@ -29,17 +29,18 @@ public class DoubleLinkedLists<L> {
         }
     }
 
-    public void getValue(int number) {
+    public int getValue(int number) {
         if (number<0 || number > size) {
             throw new RuntimeException(outOfRangeError);
         }
 
         DoubleLinkedListElement searcher = head;
+
         for (int currValue = 0; currValue < number; currValue++) {
             searcher = searcher.getNextElement();
         }
 
-        return searcher.data;
+        return (int) searcher.data;
     }
 
     public static void getSize() {
