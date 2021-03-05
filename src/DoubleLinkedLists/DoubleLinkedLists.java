@@ -29,7 +29,7 @@ public class DoubleLinkedLists<L> {
         }
     }
 
-    public int getValue(int number) {
+    public L getValue(int number) {
         if (number<0 || number > size) {
             throw new RuntimeException(outOfRangeError);
         }
@@ -40,15 +40,15 @@ public class DoubleLinkedLists<L> {
             searcher = searcher.getNextElement();
         }
 
-        return (int) searcher.data;
+        return (L) searcher.data;
     }
 
-    public static void getSize() {
-        return;
+    public int getSize() {
+        return size;
     }
 
     public void addTail(L element) {
-        DoubleLinkedListElement<L> newElement = new DoubleLinkedListElement<L>(element);
+        DoubleLinkedListElement<L> newElement = new DoubleLinkedListElement(element);
         newElement.next = null;
         newElement.previous = tail;
         if (isEmpty())  head = tail = newElement;
