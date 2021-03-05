@@ -6,4 +6,8 @@ package DoubleLinkedLists;
         DoubleLinkedListElement(L data) {
             this.data = data;
         }
+
+        public DoubleLinkedListElement getNextElement() {
+            return next;
+        }
     }
