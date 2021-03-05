@@ -60,7 +60,6 @@ public class DoubleLinkedLists<L> {
     }
 
     public void getTail() {
-
     }
 
     public void getHead(L element) {

@@ -19,7 +19,8 @@ public class DLLTest extends Assertions {
     @Test
     public void getSizeifEmpty() {
         DoubleLinkedLists DLL= new DoubleLinkedLists();
-        
+
+
         DLL.addTail(3);
         DLL.addTail(3);
         DLL.addTail(3);

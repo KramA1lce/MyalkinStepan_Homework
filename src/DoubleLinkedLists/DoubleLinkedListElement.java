@@ -7,6 +7,7 @@ package DoubleLinkedLists;
             this.data = data;
         }
 
+
         public DoubleLinkedListElement getNextElement() {
             return next;
         }
